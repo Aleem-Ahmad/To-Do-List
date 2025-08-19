@@ -1,0 +1,114 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #74ebd5, #ACB6E5);
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    /* box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); */
+    width: 100%;
+    max-width: 500px;
+}
+
+.list-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+
+.input-list {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.input-list input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #74ebd5;
+    border-radius: 8px;
+    /* transition: border-color 0.3s; */
+}
+
+/* .input-list input:focus {
+    border-color: #4bb0d2;
+    outline: none;
+    background: #f0faff; */
+}
+
+.input-list button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #74ebd5;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    /* transition: background 0.3s; */
+}
+
+.input-list button:hover {
+    background-color: #4bb0d2;
+}
+
+
+.task-List ul {
+    list-style: none;
+}
+
+.task-List li {
+    position: relative;
+    padding: 12px 40px 12px 40px;
+    margin-bottom: 10px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    transition: 0.3s ease;
+    color: #333;
+}
+
+.task-List li:hover {
+    background-color: #e9f8ff;
+    transform: scale(1.01);
+}
+
+.task-List li::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    border: 2px solid #74ebd5;
+    border-radius: 4px;
+    background-color: white;
+}
+.task-List li::after {
+    content: '✕';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #ff4d4d;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.task-List li::after:hover {
+    color: #e60000;
+}
